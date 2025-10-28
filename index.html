@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Animator - AI-Powered Music & Podcast Visualization</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="container">
+        <header class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Animate Your <span class="gradient-text">Audio</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Transform your music or podcast into stunning visual experiences with cutting-edge AI technology
+                </p>
+                <div class="upload-section">
+                    <div class="upload-area" id="uploadArea">
+                        <div class="upload-content">
+                            <div class="upload-icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                    <polyline points="7,10 12,15 17,10"/>
+                                    <line x1="12" y1="15" x2="12" y2="3"/>
+                                </svg>
+                            </div>
+                            <h3>Drop your audio file here</h3>
+                            <p>or click to browse</p>
+                            <span class="file-types">MP3, WAV, M4A supported</span>
+                        </div>
+                        <input type="file" id="fileInput" accept="audio/*" hidden>
+                    </div>
+                </div>
+
+                <!-- Visualization Controls -->
+                <div id="vizControls" class="visualization-controls" style="display: none;">
+                    <h3>Visualization Mode</h3>
+                    <div class="mode-selector">
+                        <button class="mode-btn active" data-mode="spectrum">Circular Spectrum Rings</button>
+                        <button class="mode-btn" data-mode="terrain">3D Wave Terrain</button>
+                        <button class="mode-btn" data-mode="particles">Audio Particle System</button>
+                        <button class="mode-btn" data-mode="fractal">Fractal Sound Trees</button>
+                        <button class="mode-btn" data-mode="constellation">Constellation</button>
+                        <button class="mode-btn" data-mode="orb">Orbital Bodies</button>
+                        <button class="mode-btn" data-mode="bars">Linear Bars</button>
+                        <button class="mode-btn" data-mode="spiral">Spiral Spectrum</button>
+                        <button class="mode-btn" data-mode="radar">Radar Sweep</button>
+                        <button class="mode-btn" data-mode="flow">Flow Field</button>
+                    </div>
+                    <div class="playback-controls">
+                        <button id="playBtn" class="control-btn">Play</button>
+                        <button id="pauseBtn" class="control-btn">Pause</button>
+                        <button id="stopBtn" class="control-btn">Stop</button>
+                    </div>
+                    <div class="mode-options">
+                        <label>
+                            Color:
+                            <select id="colorSelect">
+                                <option value="rainbow">Rainbow</option>
+                                <option value="mono">Mono</option>
+                            </select>
+                        </label>
+                        <label>
+                            Sensitivity:
+                            <select id="sensitivitySelect">
+                                <option value="normal">Normal</option>
+                                <option value="high">High</option>
+                                <option value="low">Low</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="recording-controls">
+                        <button id="recordBtn" class="control-btn">Record</button>
+                        <button id="stopRecordBtn" class="control-btn" disabled>Stop Recording</button>
+                        <button id="downloadBtn" class="control-btn" disabled>Download Video</button>
+                    </div>
+                </div>
+            </div>
+            <div class="audio-visualizer" id="visualizer">
+                <canvas id="canvas"></canvas>
+            </div>
+        </header>
+
+        <section class="features">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎵</div>
+                    <h3>Music Visualization</h3>
+                    <p>Generate dynamic visual patterns that dance to your beats and melodies</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎙️</div>
+                    <h3>Podcast Animation</h3>
+                    <p>Create engaging visual content for your podcast episodes and audio content</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI-Powered</h3>
+                    <p>Latest generative AI technology analyzes and creates unique visuals for each track</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Lightning Fast</h3>
+                    <p>Upload and get results in seconds with our optimized processing pipeline</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="process">
+            <h2>How It Works</h2>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h4>Upload</h4>
+                    <p>Drag and drop your audio file</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h4>AI Analysis</h4>
+                    <p>Our AI analyzes your audio patterns</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h4>Generate</h4>
+                    <p>Get your animated visualization</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
